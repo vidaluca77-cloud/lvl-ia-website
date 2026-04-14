@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merci – LVL IA</title>
+  <meta name="robots" content="noindex" />
+  <meta name="description" content="Merci pour votre message. LVL IA vous recontacte sous 24 heures ouvrées pour planifier votre diagnostic gratuit." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-bg: #0f0e0c;
+      --color-surface: #141311;
+      --color-text: #f7f6f2;
+      --color-text-muted: #a4a29e;
+      --color-primary: #3d9fa6;
+      --radius-xl: 1rem;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1.5rem;
+      background: radial-gradient(circle at top left, #1c1b17 0, #0f0e0c 40%, #050403 90%);
+      color: var(--color-text);
+      font-family: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    main {
+      width: 100%;
+      max-width: 640px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+      padding: 2.5rem 2.25rem 2.25rem;
+    }
+    @media (max-width: 640px) {
+      main { padding: 2rem 1.5rem 1.75rem; }
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+      color: var(--color-text-muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .logo span {
+      font-family: 'Instrument Serif', Georgia, serif;
+      letter-spacing: 0;
+      font-size: 1.15rem;
+      text-transform: none;
+    }
+    .logo em { color: var(--color-primary); font-style: italic; }
+    h1 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: clamp(2.1rem, 4vw, 2.7rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
+    p {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      margin-bottom: 0.9rem;
+    }
+    .muted { color: var(--color-text-muted); font-size: 0.9rem; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(0,0,0,0.35);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-top: 1.15rem;
+      color: var(--color-text-muted);
+    }
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--color-primary);
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+    }
+    a.button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.6rem;
+      border-radius: 999px;
+      border: none;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+    }
+    a.button-primary {
+      background: #ffffff;
+      color: #01696f;
+      box-shadow: 0 14px 45px rgba(0,0,0,0.45);
+    }
+    a.button-primary:hover {
+      transform: translateY(-1px);
+      background: #f0fafb;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.6);
+    }
+    a.button-secondary {
+      background: transparent;
+      color: var(--color-text-muted);
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+    a.button-secondary:hover {
+      border-color: rgba(255,255,255,0.35);
+      color: var(--color-text);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="logo">
+      <span>LVL <em>IA</em></span>
+    </div>
+    <h1>Merci pour votre message</h1>
+    <p>
+      Votre demande de diagnostic a bien été envoyée.
+      Nous revenons vers vous sous <strong>24&nbsp;heures ouvrées</strong>
+      pour vous proposer un créneau et vérifier rapidement
+      ce qui peut être automatisé chez vous.
+    </p>
+    <p class="muted">
+      Si c'est urgent, vous pouvez répondre directement à l'email
+      de confirmation que vous allez recevoir. Votre message arrivera
+      dans la même conversation.
+    </p>
+    <span class="pill">
+      <span class="pill-dot"></span>
+      Diagnostic 100% gratuit, sans engagement
+    </span>
+    <div class="actions">
+      <a href="/" class="button button-primary">Retourner sur le site LVL&nbsp;IA</a>
+      <a href="mailto:contact@lvl-ia.fr" class="button button-secondary">Écrire directement à LVL&nbsp;IA</a>
+    </div>
+  </main>
+</body>
+</html>
