@@ -476,7 +476,18 @@
           <h2 class="section-title" id="contact-heading">Reservez votre<br>diagnostic gratuit</h2>
           <p class="contact-sub">30 minutes de visio. On analyse vos besoins, on identifie les 3 automatisations les plus rentables pour votre activite. Sans engagement.</p>
         </div>
-        <form class="contact-form reveal" id="contact-form" novalidate>
+        <form class="contact-form reveal"
+              name="contact"
+              method="POST"
+              action="/merci.html"
+              data-netlify="true"
+              netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="sr-only">
+            <label>Ne pas remplir si vous etes humain :
+              <input name="bot-field" />
+            </label>
+          </p>
           <div class="form-group"><label for="nom">Nom &amp; Prenom *</label><input type="text" id="nom" name="nom" placeholder="Lucas Horville" required autocomplete="name"/></div>
           <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" placeholder="lucas@exemple.fr" required autocomplete="email"/></div>
           <div class="form-group"><label for="telephone">Telephone</label><input type="tel" id="telephone" name="telephone" placeholder="06 12 34 56 78" autocomplete="tel"/></div>
@@ -484,7 +495,6 @@
           <div class="form-group full"><label for="message">Decrivez votre situation en 2 lignes</label><textarea id="message" name="message" placeholder="Ex : Je suis plombier a Caen, je passe 2h/semaine a faire mes devis manuellement..."></textarea></div>
           <div class="form-group full" style="align-items:flex-start;"><button type="submit" class="btn-white">Reserver mon diagnostic gratuit</button></div>
         </form>
-        <div class="form-success" id="form-success" role="alert">Votre demande a bien ete envoyee ! Je vous contacte sous 24h.</div>
         <div class="contact-info reveal">
           <span class="contact-info-item"><i data-lucide="mail"></i> vidaluca77@gmail.com</span>
           <span class="contact-info-item"><i data-lucide="map-pin"></i> Caen, Normandie - France</span>
@@ -562,17 +572,6 @@
           });
           if(!wasOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}
         });
-      });
-    })();
-    (function(){
-      var form=document.getElementById('contact-form'),success=document.getElementById('form-success');
-      if(!form)return;
-      form.addEventListener('submit',function(e){
-        e.preventDefault();
-        var nom=form.querySelector('#nom').value.trim(),email=form.querySelector('#email').value.trim();
-        if(!nom||!email){alert('Merci de renseigner votre nom et votre email.');return;}
-        form.style.display='none';
-        success.classList.add('show');
       });
     })();
     document.addEventListener('DOMContentLoaded',function(){if(typeof lucide!=='undefined')lucide.createIcons();});
