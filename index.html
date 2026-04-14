@@ -211,7 +211,7 @@
     #contact { background: var(--color-primary); padding-block: clamp(var(--space-16), 8vw, var(--space-24)); }
     #contact .section-label { color: rgba(255,255,255,0.7); }
     #contact .section-title { color: #fff; }
-    .contact-sub { font-size: var(--text-base); color: rgba(255,255,255,0.8); max-width: 560px; margin-bottom: var(--space-8); }
+    .contact-sub { font-size: var(--text-base); color: rgba(255,255,255,0.8); max-width: 560px; margin-bottom: var(--space-2); }
     .contact-form { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: var(--space-4); max-width: 760px; }
     .form-group { display: flex; flex-direction: column; gap: var(--space-2); }
     .form-group.full { grid-column: 1 / -1; }
@@ -222,13 +222,14 @@
     .form-group textarea { resize: vertical; min-height: 100px; }
     .form-group select { cursor: pointer; }
     .form-group select option { background: #0f3638; color: #fff; }
-    .btn-white { background: #fff; color: var(--color-primary); font-weight: 700; padding: var(--space-3) var(--space-8); font-size: var(--text-base); border-radius: var(--radius-full); border: none; transition: all var(--transition-interactive); display: inline-flex; align-items: center; gap: var(--space-2); cursor: pointer; }
+    .btn-white { background: #fff; color: var(--color-primary); font-weight: 700; padding: var(--space-3) var(--space-8); font-size: var(--text-base); border-radius: var(--radius-full); border: none; transition: all var(--transition-interactive); display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); cursor: pointer; width: 100%; }
     .btn-white:hover { background: #f0fafb; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
     .contact-info { display: flex; gap: var(--space-8); flex-wrap: wrap; margin-top: var(--space-6); padding-top: var(--space-6); border-top: 1px solid rgba(255,255,255,0.2); }
     .contact-info-item { display: flex; align-items: center; gap: var(--space-2); font-size: var(--text-sm); color: rgba(255,255,255,0.8); }
     .contact-info-item svg { width: 16px; height: 16px; flex-shrink: 0; }
     .form-success { display: none; padding: var(--space-6); border-radius: var(--radius-xl); background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: #fff; text-align: center; font-size: var(--text-base); }
     .form-success.show { display: block; }
+    .contact-reassurance { margin-top: var(--space-2); font-size: var(--text-xs); color: rgba(255,255,255,0.8); }
     .site-footer { background: var(--color-surface); border-top: 1px solid var(--color-divider); padding-block: var(--space-12); }
     .footer-inner { display: grid; grid-template-columns: 1fr auto; gap: var(--space-8); align-items: start; }
     .footer-brand { display: flex; flex-direction: column; gap: var(--space-3); max-width: 380px; }
@@ -249,6 +250,28 @@
       .contact-info { flex-direction: column; gap: var(--space-3); }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "LVL IA",
+    "description": "Automatisation et intelligence artificielle pour PME à Caen et en Normandie. Workflows, chatbots, plateformes sur mesure et formations no-code.",
+    "image": "https://user-gen-media-assets.s3.amazonaws.com/gemini_images/13c78d5a-7433-493b-9121-67d480564d6a.png",
+    "founder": "Lucas Horville",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Caen",
+      "addressRegion": "Normandie",
+      "postalCode": "14000",
+      "addressCountry": "FR"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Normandie"
+    }
+  }
+  </script>
 </head>
 <body>
   <a href="#main" class="skip-link">Aller au contenu principal</a>
@@ -267,6 +290,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#methode">Methode</a></li>
           <li><a href="#pourquoi">Pourquoi nous</a></li>
+          <li><a href="#a-propos">A propos</a></li>
           <li><a href="#temoignages">Temoignages</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
@@ -284,6 +308,7 @@
         <a href="#services">Services</a>
         <a href="#methode">Methode</a>
         <a href="#pourquoi">Pourquoi nous</a>
+        <a href="#a-propos">A propos</a>
         <a href="#temoignages">Temoignages</a>
         <a href="#faq">FAQ</a>
         <a href="#contact" style="color:var(--color-primary);font-weight:600;">Diagnostic gratuit</a>
@@ -327,7 +352,11 @@
             <div class="service-card-body">
               <div class="service-card-icon"><i data-lucide="workflow"></i></div>
               <h3>Automatisation &amp; IA pour PME</h3>
-              <p>Audit de vos process, mise en place de workflows n8n / Zapier / Make. Devis vers facture automatique, relances, tri des emails, reporting - sans intervention humaine.</p>
+              <p>
+                <strong>Probleme :</strong> vous perdez des heures chaque mois sur des taches repetitives (devis, factures, relances, reporting).<br>
+                <strong>Ce que l'on met en place :</strong> audit de vos process et workflows n8n / Zapier / Make pour relier vos outils.<br>
+                <strong>Resultat :</strong> moins d'erreurs, plus de temps pour les clients, une vue claire sur votre activite.
+              </p>
               <div class="service-card-pills"><span class="pill">n8n</span><span class="pill">Zapier</span><span class="pill">Make</span><span class="pill">IA generative</span></div>
               <div class="service-card-price"><span class="price-from">a partir de</span><span class="price-value">490 EUR</span><span class="price-period">setup + abonnement mensuel</span></div>
               <a href="#contact" class="service-card-cta">Demander un audit</a>
@@ -338,7 +367,11 @@
             <div class="service-card-body">
               <div class="service-card-icon"><i data-lucide="car"></i></div>
               <h3>Pack VTC Autopilote</h3>
-              <p>Tu conduis, on automatise le reste. Facturation auto, relances, gestion documents, tableau de bord revenus nets. Pour les chauffeurs independants exigeants.</p>
+              <p>
+                <strong>Probleme :</strong> tu geres tes factures, relances et papiers a la main apres tes courses.<br>
+                <strong>Ce que l'on met en place :</strong> facturation auto, relances planifiees, gestion des documents et tableau de bord de tes revenus nets.<br>
+                <strong>Resultat :</strong> plus de temps sur la route, moins de stress administratif, revenus mieux maitrises.
+              </p>
               <div class="service-card-pills"><span class="pill">Facturation</span><span class="pill">CRM</span><span class="pill">Reservations</span><span class="pill">SMS auto</span></div>
               <div class="service-card-price"><span class="price-from">a partir de</span><span class="price-value">190 EUR</span><span class="price-period">/ mois par chauffeur</span></div>
               <a href="#contact" class="service-card-cta">Decouvrir le pack</a>
@@ -349,7 +382,11 @@
             <div class="service-card-body">
               <div class="service-card-icon"><i data-lucide="layers"></i></div>
               <h3>Plateformes sur mesure</h3>
-              <p>Marketplaces, plateformes de services locaux, outils de gestion agricole ou pedagogique. Espace client, espace prestataire, paiement, notifications - tout automatise.</p>
+              <p>
+                <strong>Probleme :</strong> vos demandes, prestataires et paiements sont eparpilles entre mails, fichiers et messages.<br>
+                <strong>Ce que l'on met en place :</strong> une plateforme unique (clients, prestataires, paiements, notifications) adaptee a votre metier.<br>
+                <strong>Resultat :</strong> moins de perte d'information, un suivi propre et une experience plus fluide pour tout le monde.
+              </p>
               <div class="service-card-pills"><span class="pill">Marketplace</span><span class="pill">Agri-tech</span><span class="pill">Services locaux</span><span class="pill">Collectivites</span></div>
               <div class="service-card-price"><span class="price-from">sur devis</span><span class="price-value">mission</span><span class="price-period">+ contrat de support</span></div>
               <a href="#contact" class="service-card-cta">Parler de votre projet</a>
@@ -360,12 +397,24 @@
             <div class="service-card-body">
               <div class="service-card-icon"><i data-lucide="graduation-cap"></i></div>
               <h3>Formations &amp; Ateliers IA</h3>
-              <p>Ateliers d'initiation en demi-journee ou parcours no-code complets. Vos equipes repartent avec des automatisations operationnelles des le lendemain.</p>
+              <p>
+                <strong>Probleme :</strong> vos equipes entendent parler d'IA et de no-code sans savoir par ou commencer.<br>
+                <strong>Ce que l'on met en place :</strong> ateliers courts et parcours pratiques sur ChatGPT, Zapier, n8n, Make.<br>
+                <strong>Resultat :</strong> chaque participant repart avec une ou deux automatisations operationnelles liees a son vrai travail.
+              </p>
               <div class="service-card-pills"><span class="pill">ChatGPT</span><span class="pill">Zapier</span><span class="pill">n8n</span><span class="pill">CCI / CPME</span></div>
               <div class="service-card-price"><span class="price-from">a partir de</span><span class="price-value">390 EUR</span><span class="price-period">/ session</span></div>
               <a href="#contact" class="service-card-cta">Organiser une session</a>
             </div>
           </article>
+        </div>
+        <div class="section-cta reveal" style="margin-top: var(--space-12); text-align: center;">
+          <p style="font-size: var(--text-base); color: var(--color-text-muted); margin-bottom: var(--space-4);">
+            Vous voulez voir ce qu'on pourrait automatiser dans votre activite ?
+          </p>
+          <a href="#contact" class="btn btn-primary" style="padding: var(--space-3) var(--space-8); font-size: var(--text-base);">
+            Reserver un diagnostic gratuit
+          </a>
         </div>
       </div>
     </section>
@@ -381,6 +430,14 @@
           <div class="step reveal"><span class="step-num">02</span><h3>Proposition</h3><p>Livraison d'un plan clair : scenarios a mettre en place, outils recommandes, delais et forfait. Pas de surprise, pas d'ambiguite.</p></div>
           <div class="step reveal"><span class="step-num">03</span><h3>Deploiement</h3><p>Mise en production des automatisations en 48h a 10 jours selon la complexite. Vous testez en temps reel, on ajuste jusqu'a ce que ca tourne parfaitement.</p></div>
           <div class="step reveal"><span class="step-num">04</span><h3>Suivi</h3><p>Abonnement mensuel de maintenance : surveillance des workflows, ajustements, nouvelles automatisations. Vous n'avez qu'a profiter des resultats.</p></div>
+        </div>
+        <div class="section-cta reveal" style="margin-top: var(--space-12); text-align: center;">
+          <p style="font-size: var(--text-base); color: var(--color-text-muted); margin-bottom: var(--space-4);">
+            Des la premiere etape, vous repartez avec des pistes d'automatisation concretes.
+          </p>
+          <a href="#contact" class="btn btn-primary" style="padding: var(--space-3) var(--space-8); font-size: var(--text-base);">
+            Reserver votre diagnostic
+          </a>
         </div>
       </div>
     </section>
@@ -398,6 +455,14 @@
           <div class="why-item reveal"><div class="why-icon"><i data-lucide="message-circle"></i></div><div><h3>Un interlocuteur direct</h3><p>Pas de ticket support, pas de delai. Vous avez un contact direct qui connait votre dossier de A a Z.</p></div></div>
           <div class="why-item reveal"><div class="why-icon"><i data-lucide="shield-check"></i></div><div><h3>Transparent sur les resultats</h3><p>Chaque workflow est documente. Vous savez exactement ce qui tourne, pourquoi, et comment l'ajuster vous-meme.</p></div></div>
           <div class="why-item reveal"><div class="why-icon"><i data-lucide="sprout"></i></div><div><h3>Vision long terme</h3><p>LVL IA s'inscrit dans un reseau d'innovation local (agri, tech, insertion). Nos clients rejoignent un ecosysteme, pas juste un prestataire.</p></div></div>
+        </div>
+        <div class="section-cta reveal" style="margin-top: var(--space-12); text-align: center;">
+          <p style="font-size: var(--text-base); color: var(--color-text-muted); margin-bottom: var(--space-4);">
+            Vous voulez un partenaire qui comprend votre realite terrain avant de parler techno ?
+          </p>
+          <a href="#contact" class="btn btn-primary" style="padding: var(--space-3) var(--space-8); font-size: var(--text-base);">
+            Discuter de votre projet
+          </a>
         </div>
       </div>
     </section>
@@ -469,18 +534,59 @@
         </div>
       </div>
     </section>
+    <section id="a-propos" aria-labelledby="a-propos-heading">
+      <div class="container container--narrow">
+        <div class="reveal">
+          <p class="section-label">A propos</p>
+          <h2 class="section-title" id="a-propos-heading">LVL IA, basee a Caen</h2>
+          <p class="section-sub">
+            LVL IA est portee par Lucas Horville, entrepreneur et president de l'association La Vida Luca.
+            Nous aidons les independants et PME de Caen et de toute la Normandie a automatiser leurs taches
+            repetitives grace a l'IA et aux outils no-code.
+          </p>
+        </div>
+
+        <div class="why-grid" style="margin-top: var(--space-8);">
+          <div class="why-item reveal">
+            <div class="why-icon"><i data-lucide="user"></i></div>
+            <div>
+              <h3>Un interlocuteur identifie</h3>
+              <p>Vous parlez directement avec la personne qui conçoit et deploye vos workflows, pas avec une chaine de sous-traitants.</p>
+            </div>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-icon"><i data-lucide="map"></i></div>
+            <div>
+              <h3>Ancre a Caen, actif partout</h3>
+              <p>Present physiquement a Caen pour les rendez-vous et formations, et en distanciel pour suivre vos automatisations au quotidien.</p>
+            </div>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-icon"><i data-lucide="briefcase"></i></div>
+            <div>
+              <h3>Reseau terrain</h3>
+              <p>Experience concrete sur le terrain (agri, insertion, VTC, services locaux), ce qui permet de parler metier avant de parler techno.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="contact" aria-labelledby="contact-heading">
       <div class="container container--narrow">
         <div class="reveal">
           <p class="section-label">Pret a demarrer ?</p>
           <h2 class="section-title" id="contact-heading">Reservez votre<br>diagnostic gratuit</h2>
           <p class="contact-sub">30 minutes de visio. On analyse vos besoins, on identifie les 3 automatisations les plus rentables pour votre activite. Sans engagement.</p>
+          <p class="contact-sub" style="margin-top: var(--space-1); opacity: 0.9;">
+            Deja plusieurs entrepreneurs et independants accompagnes en Normandie pour automatiser leur activite.
+          </p>
         </div>
         <form class="contact-form reveal"
               name="contact"
               method="POST"
               action="/merci.html"
               data-netlify="true"
+              netlify
               netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact" />
           <p class="sr-only">
@@ -493,7 +599,10 @@
           <div class="form-group"><label for="telephone">Telephone</label><input type="tel" id="telephone" name="telephone" placeholder="06 12 34 56 78" autocomplete="tel"/></div>
           <div class="form-group"><label for="service">Service qui vous interesse</label><select id="service" name="service"><option value="">Choisir un service...</option><option>Automatisation &amp; IA pour PME</option><option>Pack VTC Autopilote</option><option>Plateforme sur mesure</option><option>Formation &amp; Atelier IA</option><option>Je ne sais pas encore</option></select></div>
           <div class="form-group full"><label for="message">Decrivez votre situation en 2 lignes</label><textarea id="message" name="message" placeholder="Ex : Je suis plombier a Caen, je passe 2h/semaine a faire mes devis manuellement..."></textarea></div>
-          <div class="form-group full" style="align-items:flex-start;"><button type="submit" class="btn-white">Reserver mon diagnostic gratuit</button></div>
+          <div class="form-group full" style="flex-direction: column; align-items: flex-start;">
+            <button type="submit" class="btn-white">Reserver mon diagnostic gratuit</button>
+            <p class="contact-reassurance">Pas de spam. Reponse sous 24h. Diagnostic 100&nbsp;% gratuit.</p>
+          </div>
         </form>
         <div class="contact-info reveal">
           <span class="contact-info-item"><i data-lucide="mail"></i> vidaluca77@gmail.com</span>
@@ -522,6 +631,7 @@
           <a href="#methode">Methode</a>
           <a href="#temoignages">Temoignages</a>
           <a href="#faq">FAQ</a>
+          <a href="#a-propos">A propos</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
